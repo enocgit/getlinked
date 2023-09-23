@@ -1,0 +1,15 @@
+.revolution {
+    position: relative;
+}
+
+.revolution::after {
+    content: "";
+    position: absolute;
+    bottom: -1rem;
+    right: 0;
+    width: 11rem;
+    height: 1rem;
+    @apply border-t-4 border-tertiary-200;
+    border-radius: 50%;
+}
+
