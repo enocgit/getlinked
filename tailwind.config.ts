@@ -15,6 +15,7 @@ const config: Config = {
       backgroundImage: {
         primary: "linear-gradient(to right, #FE34B9, #903AFF)",
         "primary-100": "linear-gradient(to right, #903AFF, #FE34B9)",
+        "primary-200": "linear-gradient(to right, #FE34B9 1%, #903AFF)",
       },
       colors: {
         secondary: {
@@ -26,6 +27,7 @@ const config: Config = {
           100: "#D434FE",
           200: "#FF26B9",
         },
+        "white/3": "rgb(255 255 255 / 0.03)"
       },
       screens: {
         xss: "320px",

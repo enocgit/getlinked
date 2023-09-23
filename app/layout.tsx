@@ -1,6 +1,6 @@
 import { Providers } from "@/providers";
 import "./globals.css";
-import "./clash-display.css"
+import "./clash-display.css";
 import type { Metadata } from "next";
 import { Montserrat, Unica_One } from "next/font/google";
 import Nav from "@/components/Navbar";

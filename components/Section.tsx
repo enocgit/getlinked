@@ -8,7 +8,7 @@ type Props = {
 const Section = ({ children, className }: Props) => {
   return (
     <section
-      className={`flex items-center justify-center text-white py-14 px-10 min-h-max bg-secondary border-b border-neutral-500/50 ${className}`}
+      className={`flex min-h-max items-center justify-center border-b border-neutral-500/50 bg-secondary px-10 py-14 text-white ${className}`}
     >
       {children}
     </section>

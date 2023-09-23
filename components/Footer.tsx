@@ -1,18 +1,20 @@
+"use client";
 import { clashDisplay } from "@/app/font";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import Glow from "./Glow";
 import BgAesthetic from "./BgAesthetic";
+import { usePathname } from "next/navigation";
 
 type Props = {};
 
 const Footer = (props: Props) => {
+  const pathname = usePathname()
   return (
-    <footer className="flex items-center justify-center p-8 text-xs text-white xss:p-14 bg-secondary-100">
+    <footer className={`${pathname !== "/" && "hidden"} flex items-center justify-center p-8 text-xs text-white xss:p-14 bg-secondary-100 `}>
       <div className="">
         <div className="relative flex flex-wrap gap-y-10 gap-x-20 lg:gap-x-32">
-          <Glow className="-top-40 -left-60 opacity-10" />
           <BgAesthetic
             src="/svg/star-white.svg"
             className="-left-20 top-10"

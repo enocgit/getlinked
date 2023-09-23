@@ -5,7 +5,7 @@ import { Accordion, AccordionItem, Divider } from "@nextui-org/react";
 import { FaMinus, FaPlus } from "react-icons/fa";
 
 const FAQAccordion = () => {
-//   const [selectedKeys, setSelectedKeys] = React.useState(new Set(["1"]));
+  //   const [selectedKeys, setSelectedKeys] = React.useState(new Set(["1"]));
 
   const defaultContent =
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
@@ -20,12 +20,12 @@ const FAQAccordion = () => {
 
   return (
     <Accordion
-    //   selectedKeys={selectedKeys}
-    //   onSelectionChange={setSelectedKeys}
+      //   selectedKeys={selectedKeys}
+      //   onSelectionChange={setSelectedKeys}
       itemClasses={itemClasses}
       keepContentMounted
       showDivider
-    //   disableIndicatorAnimationAnimation
+      //   disableIndicatorAnimationAnimation
     >
       <AccordionItem
         key="1"
