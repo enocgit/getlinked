@@ -1,5 +1,5 @@
-//@ts-nocheck
 
+//@ts-nocheck
 "use client";
 import React from "react";
 
@@ -24,8 +24,6 @@ const Nav = () => {
   const pathname = usePathname();
 
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-
-  const menuItems = ["Timeline", "Overview", "FAQs", "Contact"];
 
   return (
     <Navbar
@@ -108,16 +106,20 @@ const Nav = () => {
         </div>
       </NavbarContent>
       <NavbarMenu className="bg-secondary">
-        {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
+        {navMenus.map((menu, index) => (
+          <NavbarMenuItem key={menu.id}>
             <Link
-              className={`mb-5 w-full text-[1.125rem] font-[500] text-white ${
+              className={`mb-5 w-full text-[1.125rem] font-[500] ${
+                pathname === menu.href
+                  ? "bg-primary-100 bg-clip-text text-transparent"
+                  : " text-white"
+              } ${
                 index == 0 && "mt-14"
-              }`}
-              href="#"
+              } `}
+              href={menu.href}
               size="lg"
             >
-              {item}
+              {menu.label}
             </Link>
           </NavbarMenuItem>
         ))}
