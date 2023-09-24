@@ -36,7 +36,7 @@ export default function RegisterSuccessModal({
                 <div className="flex flex-col items-center">
                   <div className="relative h-60 w-60">
                     <Image
-                      src="/svg/congratulation.svg"
+                      src="/png/congratulation.png"
                       alt=""
                       fill
                       style={{ objectFit: "contain" }}

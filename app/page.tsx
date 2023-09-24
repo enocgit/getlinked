@@ -22,9 +22,9 @@ export default function Home() {
           <h2
             className={`${style.revolution} text-center text-lg font-[700] italic tracking-wide sm:text-2xl xl:text-right`}
           >
-            <BgAesthetic src="/svg/star-white.svg" className="left-12 top-8" />
+            <BgAesthetic src="/png/star-white.png" className="left-12 top-8" />
             <BgAesthetic
-              src="/svg/star-neutral.svg"
+              src="/png/star-neutral.png"
               className="right-96 top-20"
             />
             <Glow className="left-0 top-0 lg:left-20" />
@@ -34,7 +34,7 @@ export default function Home() {
           </h2>
           <div className="relative mt-14 flex flex-col xl:flex-row">
             <BgAesthetic
-              src="/svg/star-neutral.svg"
+              src="/png/star-neutral.png"
               className="bottom-40 left-96"
             />
             <div className="flex translate-y-[6%] flex-col items-center space-y-5 xl:items-start">
@@ -45,7 +45,7 @@ export default function Home() {
                 <span className={`${style.cChar} relative`}>
                   c
                   <Image
-                    src="/svg/bulb.svg"
+                    src="/png/bulb.png"
                     alt="chain"
                     width={60}
                     height={60}
@@ -55,14 +55,14 @@ export default function Home() {
                 h Hackathon <span className="text-tertiary-100">1.0</span>
                 <div className="absolute -right-2 bottom-0 sm:-right-12 xl:right-2">
                   <Image
-                    src="/svg/chain.svg"
+                    src="/png/chain.png"
                     alt=""
                     width={60}
                     height={60}
                     className="ml-2 inline h-[25px] w-[25px] sm:h-[60px] sm:w-[60px]"
                   />
                   <Image
-                    src="/svg/explosion.svg"
+                    src="/png/explosion.png"
                     alt=""
                     width={40}
                     height={40}
@@ -117,7 +117,7 @@ export default function Home() {
         <div className="relative flex flex-col items-center gap-x-20 gap-y-8 md:flex-row">
           <div className="relative h-60 w-60 md:h-[30rem] md:w-[30rem]">
             <BgAesthetic
-              src="/svg/star-gradient.svg"
+              src="/png/star-gradient.png"
               className="-left-10 top-32"
             />
             <BgAesthetic
@@ -125,8 +125,8 @@ export default function Home() {
               className="-right-10 bottom-0 w-16"
             />
             <Image
-              src="/svg/big-idea.svg"
-              alt=""
+              src="/png/big-idea.png"
+              alt="Big idea"
               fill
               style={{ objectFit: "contain" }}
               className="vibrate-1"
@@ -134,7 +134,7 @@ export default function Home() {
           </div>
           <div className="relative space-y-3">
             <BgAesthetic
-              src="/svg/star-purple.svg"
+              src="/png/star-purple.png"
               className="right-10 top-10"
             />
             <h3
@@ -161,11 +161,11 @@ export default function Home() {
           <div className="relative order-2 space-y-3 md:order-1">
             <Glow className="-left-10 -top-60 sm:left-20" />
             <BgAesthetic
-              src="/svg/star-neutral.svg"
+              src="/png/star-neutral.png"
               className="-top-5 left-44"
             />
             <BgAesthetic
-              src="/svg/star-white.svg"
+              src="/png/star-white.png"
               className="-bottom-10 right-2"
             />
             <h3
@@ -187,8 +187,8 @@ export default function Home() {
           <div className="relative order-1 h-60 w-60 md:order-2 md:h-[30rem] md:w-[30rem]">
             <Glow className="-bottom-96 -right-80 md:bottom-10" />
             <Image
-              src="/svg/lady-with-book.svg"
-              alt=""
+              src="/png/lady-with-book.png"
+              alt="Lady with book"
               fill
               style={{ objectFit: "contain" }}
               className="vibrate-1"
@@ -201,17 +201,17 @@ export default function Home() {
         <div className="relative flex flex-col items-center gap-x-20 gap-y-8 md:flex-row">
           <div className="relative h-60 w-60 md:h-[30rem] md:w-[30rem]">
             <Glow className="-left-40 top-20 md:top-60 lg:-left-10" />
-            <BgAesthetic src="/svg/star-purple.svg" className="left-24 top-0" />
+            <BgAesthetic src="/png/star-purple.png" className="left-24 top-0" />
             <BgAesthetic
-              src="/svg/star-neutral.svg"
+              src="/png/star-neutral.png"
               className="bottom-40 right-44"
             />
             <BgAesthetic
-              src="/svg/star-white.svg"
+              src="/png/star-white.png"
               className="bottom-0 right-5"
             />
             <Image
-              src="/svg/two-people.svg"
+              src="/png/two-people.png"
               alt=""
               fill
               style={{ objectFit: "contain" }}
@@ -282,11 +282,11 @@ export default function Home() {
           <div className="relative space-y-12 md:flex-[2]">
             <div className="relative flex flex-col items-center space-y-3 md:items-start">
               <BgAesthetic
-                src="/svg/star-purple.svg"
+                src="/png/star-purple.png"
                 className="-left-10 -top-10"
               />
               <BgAesthetic
-                src="/svg/star-neutral.svg"
+                src="/png/star-neutral.png"
                 className="-right-20 top-52"
               />
               <h3
@@ -306,27 +306,27 @@ export default function Home() {
           </div>
           <div className="relative h-60 w-60 md:h-[35rem] md:w-[20rem] md:flex-[3]">
             <BgAesthetic
-              src="/svg/star-white.svg"
+              src="/png/star-white.png"
               className="-bottom-10 right-20"
             />
             <BgAesthetic
-              src="/svg/star-neutral.svg"
+              src="/png/star-neutral.png"
               className="bottom-20 right-20"
             />
             <BgAesthetic
-              src="/svg/star-gradient.svg"
+              src="/png/star-gradient.png"
               className="left-20 top-40"
               width={10}
               height={10}
             />
             <BgAesthetic
-              src="/svg/star-gradient.svg"
+              src="/png/star-gradient.png"
               className="right-60 top-20"
               width={10}
               height={10}
             />
             <Image
-              src="/svg/guy-on-cloud.svg"
+              src="/png/guy-on-cloud.png"
               alt=""
               fill
               style={{ objectFit: "contain" }}
@@ -340,15 +340,15 @@ export default function Home() {
         <div className="relative flex flex-col items-center gap-y-14 sm:gap-y-32">
           <div className="relative space-y-3 text-center">
             <BgAesthetic
-              src="/svg/star-purple.svg"
+              src="/png/star-purple.png"
               className="-left-20 top-40"
             />
             <BgAesthetic
-              src="/svg/star-white.svg"
+              src="/png/star-white.png"
               className="-right-44 top-[34rem]"
             />
             <BgAesthetic
-              src="/svg/star-neutral.svg"
+              src="/png/star-neutral.png"
               className="-left-52 top-[60rem]"
             />
             <h3 className={`${clashDisplay.className} text-center text-2xl`}>
@@ -383,17 +383,17 @@ export default function Home() {
             <Glow className="-left-40 top-0 lg:left-20" />
 
             <BgAesthetic
-              src="/svg/star-gradient.svg"
+              src="/png/star-gradient.png"
               className="-top-10 left-60"
             />
             <BgAesthetic
-              src="/svg/star-white.svg"
+              src="/png/star-white.png"
               className="-bottom-10 left-60"
               width={10}
               height={10}
             />
             <Image
-              src="/svg/trophy.svg"
+              src="/png/trophy.png"
               alt=""
               fill
               style={{ objectFit: "contain" }}
@@ -403,7 +403,7 @@ export default function Home() {
           <div className="relative flex flex-col items-center md:space-y-20">
             <Glow className="-bottom-5 -right-80" />
             <BgAesthetic
-              src="/svg/star-gradient.svg"
+              src="/png/star-gradient.png"
               className="right-0 top-40"
             />
             <div className="hidden space-y-3 md:block">
@@ -420,20 +420,20 @@ export default function Home() {
             </div>
             <div className="-gap-2 relative flex flex-col min-[400px]:flex-row min-[400px]:max-sm:scale-75 md:max-[1090px]:right-20 md:max-[1090px]:scale-75">
               <BgAesthetic
-                src="/svg/star-neutral.svg"
+                src="/png/star-neutral.png"
                 className="-bottom-10 right-40"
               />
               <BgAesthetic
-                src="/svg/star-white.svg"
+                src="/png/star-white.png"
                 className="-right-20 top-20"
               />
               <BgAesthetic
-                src="/svg/star-white.svg"
+                src="/png/star-white.png"
                 className="-top-12 left-0"
               />
               <div className="relative order-2 mt-5 h-80 w-48 min-[400px]:order-1 min-[400px]:mt-14 min-[400px]:h-60 min-[400px]:w-32 md:mt-0">
                 <Image
-                  src="/svg/2nd-position.svg"
+                  src="/png/2nd-position.png"
                   alt=""
                   fill
                   style={{ objectFit: "contain" }}
@@ -442,7 +442,7 @@ export default function Home() {
               </div>
               <div className="relative order-1 mt-14 h-80 w-48 min-[400px]:bottom-14 min-[400px]:order-2 md:mt-0">
                 <Image
-                  src="/svg/1st-position.svg"
+                  src="/png/1st-position.png"
                   alt=""
                   fill
                   style={{ objectFit: "contain" }}
@@ -451,7 +451,7 @@ export default function Home() {
               </div>
               <div className="relative order-3 mt-5 h-80 w-48 min-[400px]:order-3 min-[400px]:mt-14 min-[400px]:h-60 min-[400px]:w-32 md:mt-0">
                 <Image
-                  src="/svg/3rd-position.svg"
+                  src="/png/3rd-position.png"
                   alt=""
                   fill
                   style={{ objectFit: "contain" }}
@@ -483,11 +483,11 @@ export default function Home() {
           <div className="relative order-2 space-y-12 md:order-1">
             <div className="relative flex flex-col items-center space-y-3 md:items-start">
               <BgAesthetic
-                src="/svg/star-neutral.svg"
+                src="/png/star-neutral.png"
                 className="right-48 top-0"
               />
               <BgAesthetic
-                src="/svg/star-purple.svg"
+                src="/png/star-purple.png"
                 className="right-2 top-32 md:top-20"
               />
               <h3
@@ -507,7 +507,7 @@ export default function Home() {
             <div className="relative max-w-[480px] space-y-6 rounded-md border border-tertiary-100 p-5 pb-10 xs:p-14">
               <Glow className="-bottom-10 -left-40 lg:-left-40" />
               <BgAesthetic
-                src="/svg/star-gradient.svg"
+                src="/png/star-gradient.png"
                 className="-left-20 bottom-48"
               />
               <p className="leading-loose">
@@ -549,30 +549,30 @@ export default function Home() {
           </div>
           <div className="relative order-1 h-60 w-60 md:order-2 md:h-[45rem] md:w-[30rem]">
             <BgAesthetic
-              src="/svg/star-white.svg"
+              src="/png/star-white.png"
               className="right-32 top-40"
               width={10}
               height={10}
             />
             <BgAesthetic
-              src="/svg/star-neutral.svg"
+              src="/png/star-neutral.png"
               className="bottom-20 right-0"
             />
             <BgAesthetic
-              src="/svg/star-white.svg"
+              src="/png/star-white.png"
               className="bottom-32 left-20"
               width={10}
               height={10}
             />
             <BgAesthetic
-              src="/svg/star-gradient.svg"
+              src="/png/star-gradient.png"
               className="bottom-52 left-40"
               width={10}
               height={10}
             />
             <Image
-              src="/svg/guy-on-lock.svg"
-              alt=""
+              src="/png/guy-on-lock.png"
+              alt="Guy sitting on padlock"
               fill
               style={{ objectFit: "contain" }}
               className="vibrate-1"

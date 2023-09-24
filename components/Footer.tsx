@@ -16,7 +16,7 @@ const Footer = (props: Props) => {
       <div className="">
         <div className="relative flex flex-wrap gap-y-10 gap-x-20 lg:gap-x-32">
           <BgAesthetic
-            src="/svg/star-white.svg"
+            src="/png/star-white.png"
             className="-left-20 top-10"
             width={10}
             height={10}
@@ -45,7 +45,7 @@ const Footer = (props: Props) => {
           {/* Useful Links */}
           <div className="relative">
             <BgAesthetic
-              src="/svg/star-gradient.svg"
+              src="/png/star-gradient.png"
               className="-left-20 -bottom-2"
               width={10}
               height={10}
@@ -105,13 +105,13 @@ const Footer = (props: Props) => {
           {/* Contact Us */}
           <div className="relative">
             <BgAesthetic
-              src="/svg/star-neutral.svg"
+              src="/png/star-neutral.png"
               className="-left-20 top-10"
               width={10}
               height={10}
             />
             <BgAesthetic
-              src="/svg/star-white.svg"
+              src="/png/star-white.png"
               className="-right-20 bottom-10"
               width={10}
               height={10}

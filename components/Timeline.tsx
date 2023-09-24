@@ -61,15 +61,15 @@ const Timeline = (props: Props) => {
       </div>
       <div className="relative grid gap-5 text-xs sm:hidden">
         <BgAesthetic
-          src="/svg/star-purple.svg"
+          src="/png/star-purple.png"
           className="-top-10 left-2 h-5 w-5"
         />
         <BgAesthetic
-          src="/svg/star-white.svg"
+          src="/png/star-white.png"
           className="bottom-60 right-5 h-5 w-5"
         />
         <BgAesthetic
-          src="/svg/star-neutral.svg"
+          src="/png/star-neutral.png"
           className="-bottom-5 -left-5 h-5 w-5"
         />
         {mockTimeline.map((timeline) => {

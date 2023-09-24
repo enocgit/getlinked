@@ -99,7 +99,7 @@ const ContactPage = (props: Props) => {
           <div className="relative order-2 hidden space-y-3 md:order-1 md:block">
             <Glow className="-left-40 top-0 opacity-30 sm:-left-48" />
             <BgAesthetic
-              src="/svg/star-gradient.svg"
+              src="/png/star-gradient.png"
               className="-top-20 left-0"
             />
             <h3
@@ -165,19 +165,19 @@ const ContactPage = (props: Props) => {
           </div>
           <div className="relative order-1 w-full max-w-[30rem] rounded-md bg-transparent md:order-2 md:bg-white/3 md:p-14 md:shadow-md">
             <BgAesthetic
-              src="/svg/star-white.svg"
+              src="/png/star-white.png"
               className="-right-6 bottom-40 h-5 w-5 md:-right-20 md:bottom-0 md:h-[initial] md:w-[initial]"
             />
             <BgAesthetic
-              src="/svg/star-gradient.svg"
+              src="/png/star-gradient.png"
               className="bottom-20 left-0 h-5 w-5 md:-left-2 md:bottom-40 md:h-[initial] md:w-[initial]"
             />
             <BgAesthetic
-              src="/svg/star-neutral.svg"
+              src="/png/star-neutral.png"
               className="right-0 top-10 h-5 w-5 md:-top-20 md:right-5 md:h-[initial] md:w-[initial]"
             />
             <BgAesthetic
-              src="/svg/star-gradient.svg"
+              src="/png/star-gradient.png"
               className="-top-8 right-32 h-5 w-5 md:hidden"
             />
             <Glow className="bottom-[28rem] right-60 opacity-40 md:-right-40 md:bottom-0" />

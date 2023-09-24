@@ -119,34 +119,33 @@ const RegisterPage = (props: Props) => {
           <div className="relative space-y-3">
             <Glow className="-left-40 top-0 opacity-30 sm:-left-48" />
             <BgAesthetic
-              src="/svg/star-gradient.svg"
+              src="/png/star-gradient.png"
               className="-top-20 left-0 hidden md:block"
             />
-            <div className="relative order-1 h-60 w-60 md:order-2 md:max-lg:h-80 md:max-lg:w-80 lg:h-[30rem] lg:w-[30rem]">
+            <div className="swing-in-top-fwd relative order-1 h-60 w-60 md:order-2 md:max-lg:h-80 md:max-lg:w-80 lg:h-[30rem] lg:w-[30rem]">
               <Image
-                src="/svg/guy-thumbs-up.svg"
+                src="/png/guy-thumbs-up.png"
                 alt="Gentleman behind table"
                 fill
                 style={{ objectFit: "contain" }}
-                className="swing-in-top-fwd"
               />
             </div>
           </div>
           <div className="relative w-full max-w-[35rem] rounded-md bg-transparent md:bg-white/3 md:p-14 md:shadow-md">
             <BgAesthetic
-              src="/svg/star-white.svg"
+              src="/png/star-white.png"
               className="-right-6 bottom-40 h-5 w-5 md:-right-32 md:bottom-0 md:h-10 md:w-10"
             />
             <BgAesthetic
-              src="/svg/star-purple.svg"
+              src="/png/star-purple.png"
               className="bottom-20 left-0 hidden md:-left-10 md:bottom-40 md:block"
             />
             <BgAesthetic
-              src="/svg/star-neutral.svg"
+              src="/png/star-neutral.png"
               className="right-0 top-10 h-5 w-5 md:right-20 md:top-5 md:h-[initial] md:w-[initial]"
             />
             <BgAesthetic
-              src="/svg/star-gradient.svg"
+              src="/png/star-gradient.png"
               className="-top-8 right-32 h-5 w-5 md:hidden"
             />
             <Glow className="bottom-[28rem] right-60 opacity-40 md:-right-40 md:bottom-0" />
@@ -160,7 +159,7 @@ const RegisterPage = (props: Props) => {
               Be a part of this moment
               <span className="absolute -bottom-5 -right-24 inline-block h-20 w-20">
                 <Image
-                  src="/svg/people-on-robe.svg"
+                  src="/png/people-on-robe.png"
                   alt="People on robe"
                   fill
                   style={{ objectFit: "contain" }}
@@ -339,8 +338,9 @@ const RegisterPage = (props: Props) => {
                   size="sm"
                   type="checkbox"
                 > */}
-                <input {...register("privacy_poclicy_accepted")} type="checkbox" className="translate-y-[2px] accent-tertiary-100 " />
-                I agreed with the event terms and conditions and privacy policy
+                <input {...register("privacy_poclicy_accepted")} id="privacy_poclicy_accepted" type="checkbox" className="translate-y-[2px] accent-tertiary-100 " />
+                <label htmlFor="privacy_poclicy_accepted">I agreed with the event terms and conditions and privacy policy</label>
+                
               </div>
               {/* <MainButton className="col-span-2 w-full">Submit</MainButton> */}
               <button
