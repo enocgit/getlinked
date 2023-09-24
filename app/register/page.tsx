@@ -86,7 +86,7 @@ const RegisterPage = (props: Props) => {
       }
       const createdData = await res.json();
       if (createdData) {
-        onOpen()
+        onOpen();
         reset();
         setSubmitState("submit");
         console.log(data);
@@ -102,8 +102,7 @@ const RegisterPage = (props: Props) => {
     }
   };
 
-  const {isOpen, onOpen, onOpenChange} = useDisclosure();
-
+  const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
   return (
     <>
@@ -117,7 +116,7 @@ const RegisterPage = (props: Props) => {
       <Section className="relative overflow-x-hidden text-white">
         <div className="relative flex flex-col items-center gap-x-20 md:flex-row md:gap-y-8">
           <div className="relative space-y-3">
-            <Glow className="-left-40 top-0 opacity-30 sm:-left-48" />
+            <Glow className="vibrate-1 -left-40 top-0 opacity-30 sm:-left-48" />
             <BgAesthetic
               src="/png/star-gradient.png"
               className="-top-20 left-0 hidden md:block"
@@ -148,7 +147,7 @@ const RegisterPage = (props: Props) => {
               src="/png/star-gradient.png"
               className="-top-8 right-32 h-5 w-5 md:hidden"
             />
-            <Glow className="bottom-[28rem] right-60 opacity-40 md:-right-40 md:bottom-0" />
+            <Glow className="vibrate-1 bottom-[28rem] right-60 opacity-40 md:-right-40 md:bottom-0" />
 
             <h3
               className={`${clashDisplay.className} text-2xl text-tertiary-100`}
@@ -338,9 +337,16 @@ const RegisterPage = (props: Props) => {
                   size="sm"
                   type="checkbox"
                 > */}
-                <input {...register("privacy_poclicy_accepted")} id="privacy_poclicy_accepted" type="checkbox" className="translate-y-[2px] accent-tertiary-100 " />
-                <label htmlFor="privacy_poclicy_accepted">I agreed with the event terms and conditions and privacy policy</label>
-                
+                <input
+                  {...register("privacy_poclicy_accepted")}
+                  id="privacy_poclicy_accepted"
+                  type="checkbox"
+                  className="translate-y-[2px] accent-tertiary-100 "
+                />
+                <label htmlFor="privacy_poclicy_accepted">
+                  I agreed with the event terms and conditions and privacy
+                  policy
+                </label>
               </div>
               {/* <MainButton className="col-span-2 w-full">Submit</MainButton> */}
               <button
@@ -353,7 +359,10 @@ const RegisterPage = (props: Props) => {
           </div>
         </div>
       </Section>
-      <RegisterSuccessModal modalIsOpen={isOpen} modalOnOpenChange={onOpenChange} />
+      <RegisterSuccessModal
+        modalIsOpen={isOpen}
+        modalOnOpenChange={onOpenChange}
+      />
     </>
   );
 };

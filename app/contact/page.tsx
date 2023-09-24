@@ -97,7 +97,7 @@ const ContactPage = (props: Props) => {
       <Section className="relative overflow-x-hidden pt-32 text-white md:py-32">
         <div className="relative items-center gap-x-40 md:flex md:gap-y-8 md:max-lg:gap-x-20">
           <div className="relative order-2 hidden space-y-3 md:order-1 md:block">
-            <Glow className="-left-40 top-0 opacity-30 sm:-left-48" />
+            <Glow className="vibrate-1 -left-40 top-0 opacity-30 sm:-left-48" />
             <BgAesthetic
               src="/png/star-gradient.png"
               className="-top-20 left-0"
@@ -180,7 +180,7 @@ const ContactPage = (props: Props) => {
               src="/png/star-gradient.png"
               className="-top-8 right-32 h-5 w-5 md:hidden"
             />
-            <Glow className="bottom-[28rem] right-60 opacity-40 md:-right-40 md:bottom-0" />
+            <Glow className="vibrate-1 bottom-[28rem] right-60 opacity-40 md:-right-40 md:bottom-0" />
             <Image
               src="/svg/back.svg"
               alt="close menu"

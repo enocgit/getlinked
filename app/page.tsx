@@ -219,7 +219,7 @@ export default function Home() {
             />
           </div>
           <div className="relative space-y-3">
-            <Glow className="-bottom-32 -right-40" />
+            {/* <Glow className="-bottom-32 -right-40" /> */}
             <h3
               className={`${clashDisplay.className} text-center text-2xl md:max-w-[200px] md:text-left`}
             >
@@ -305,6 +305,8 @@ export default function Home() {
             </div>
           </div>
           <div className="relative h-60 w-60 md:h-[35rem] md:w-[20rem] md:flex-[3]">
+            <Glow className="-right-40 -top-44" />
+
             <BgAesthetic
               src="/png/star-white.png"
               className="-bottom-10 right-20"
@@ -505,7 +507,10 @@ export default function Home() {
               </p>
             </div>
             <div className="relative max-w-[480px] space-y-6 rounded-md border border-tertiary-100 p-5 pb-10 xs:p-14">
+              <Glow className="-right-[40rem] -top-[32rem]" />
+
               <Glow className="-bottom-10 -left-40 lg:-left-40" />
+
               <BgAesthetic
                 src="/png/star-gradient.png"
                 className="-left-20 bottom-48"
