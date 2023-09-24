@@ -113,7 +113,7 @@ export default function Home() {
         </div>
       </section>
       {/* Introduction to getLinked */}
-      <Section className="relative">
+      <Section className="relative" id="overview">
         <div className="relative flex flex-col items-center gap-x-20 gap-y-8 md:flex-row">
           <div className="relative h-60 w-60 md:h-[30rem] md:w-[30rem]">
             <BgAesthetic
@@ -277,7 +277,7 @@ export default function Home() {
         </div>
       </Section>
       {/* Frequently Asked Questions */}
-      <Section className="relative text-sm">
+      <Section className="relative text-sm" id="faqs">
         <div className="relative flex flex-col items-center gap-x-5 gap-y-8 md:flex-row">
           <div className="relative space-y-12 md:flex-[2]">
             <div className="relative flex flex-col items-center space-y-3 md:items-start">
@@ -338,7 +338,7 @@ export default function Home() {
         </div>
       </Section>
       {/* Timeline */}
-      <Section className="relative text-sm">
+      <Section className="relative text-sm" id="timeline">
         <div className="relative flex flex-col items-center gap-y-14 sm:gap-y-32">
           <div className="relative space-y-3 text-center">
             <BgAesthetic

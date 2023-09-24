@@ -2,17 +2,17 @@ const navMenus = [
     {
         id: 1,
         label: "Timeline",
-        href: "/timeline",
+        href: "/#timeline",
     },
     {
         id: 2,
         label: "Overview",
-        href: "/overview",
+        href: "/#overview",
     },
     {
         id: 3,
         label: "FAQs",
-        href: "/faqs",
+        href: "/#faqs",
     },
     {
         id: 4,
