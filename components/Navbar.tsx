@@ -101,7 +101,7 @@ const Nav = () => {
         </div>
         <div className="hidden md:inline-flex">
           <NavbarItem>
-            <MainButton href="/register">Register</MainButton>
+            <MainButton href="/register" className={`${pathname == "/register" && "bg-secondary border border-primary"}`}>Register</MainButton>
           </NavbarItem>
         </div>
       </NavbarContent>
@@ -123,7 +123,7 @@ const Nav = () => {
             </Link>
           </NavbarMenuItem>
         ))}
-        <MainButton href="/register">Register</MainButton>
+        <MainButton href="/register" className={`${pathname == "/register" && "bg-secondary border border-primary"}`}>Register</MainButton>
       </NavbarMenu>
     </Navbar>
   );

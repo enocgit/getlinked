@@ -39,7 +39,7 @@ export default function Home() {
             />
             <div className="flex translate-y-[6%] flex-col items-center space-y-5 xl:items-start">
               <h1
-                className={`${clashDisplay.className} relative max-w-sm text-center text-4xl font-[700] leading-tight sm:max-w-xl sm:text-6xl xl:text-left`}
+                className={`${clashDisplay.className} text-flicker-in-glow relative max-w-sm text-center text-4xl font-[700] leading-tight sm:max-w-xl sm:text-6xl xl:text-left`}
               >
                 getlinked Te
                 <span className={`${style.cChar} relative`}>
@@ -129,6 +129,7 @@ export default function Home() {
               alt=""
               fill
               style={{ objectFit: "contain" }}
+              className="vibrate-1"
             />
           </div>
           <div className="relative space-y-3">
@@ -190,6 +191,7 @@ export default function Home() {
               alt=""
               fill
               style={{ objectFit: "contain" }}
+              className="vibrate-1"
             />
           </div>
         </div>
@@ -213,6 +215,7 @@ export default function Home() {
               alt=""
               fill
               style={{ objectFit: "contain" }}
+              className="vibrate-1"
             />
           </div>
           <div className="relative space-y-3">
@@ -327,6 +330,7 @@ export default function Home() {
               alt=""
               fill
               style={{ objectFit: "contain" }}
+              className="vibrate-1"
             />
           </div>
         </div>
@@ -393,7 +397,7 @@ export default function Home() {
               alt=""
               fill
               style={{ objectFit: "contain" }}
-              className="md:max-[1090px]:scale-75"
+              className="vibrate-1 md:max-[1090px]:scale-75"
             />
           </div>
           <div className="relative flex flex-col items-center md:space-y-20">
@@ -470,18 +474,7 @@ export default function Home() {
               companies as its partners and sponsors
             </p>
           </div>
-            <Partners />
-            {/* <Glow className="-bottom-32 -right-40" />
-            <Glow className="-left-40 top-20 md:top-60 lg:-left-10" />
-            <BgAesthetic src="/svg/star-purple.svg" className="left-24 top-0" />
-            <BgAesthetic
-              src="/svg/star-neutral.svg"
-              className="bottom-40 right-44"
-            />
-            <BgAesthetic
-              src="/svg/star-white.svg"
-              className="bottom-0 right-5"
-            /> */}
+          <Partners />
         </div>
       </Section>
       {/* Privacy Policy and Terms */}
@@ -582,6 +575,7 @@ export default function Home() {
               alt=""
               fill
               style={{ objectFit: "contain" }}
+              className="vibrate-1"
             />
           </div>
         </div>

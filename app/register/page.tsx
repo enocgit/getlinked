@@ -67,7 +67,6 @@ const RegisterPage = (props: Props) => {
   });
 
   const onSubmit: SubmitHandler<FormValues> = async (data) => {
-    console.log(data)
     setSubmitState("submitting...");
     try {
       const res = await fetch(`${baseUrl}/hackathon/registration`, {
@@ -129,6 +128,7 @@ const RegisterPage = (props: Props) => {
                 alt="Gentleman behind table"
                 fill
                 style={{ objectFit: "contain" }}
+                className="swing-in-top-fwd"
               />
             </div>
           </div>
