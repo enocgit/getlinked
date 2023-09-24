@@ -54,7 +54,7 @@ export default function Home() {
                   />
                 </span>
                 h Hackathon <span className="text-tertiary-100">1.0</span>
-                <div className="absolute -right-2 bottom-0 sm:-right-12 xl:right-2">
+                <div className="-right-2 bottom-0 xs:absolute sm:-right-12 xl:right-2">
                   <Image
                     src="/png/chain.png"
                     alt=""
@@ -85,7 +85,6 @@ export default function Home() {
                 alt=""
                 width={450}
                 height={450}
-                // style={{objectFit: "contain"}}
                 className="absolute -top-2 left-14 z-10 h-[200px] w-[200px] xs:h-[300px] xs:w-[300px] sm:h-[450px] sm:w-[450px]"
               />
               <div className="relative mx-auto h-[15rem] w-[18rem] xs:mx-0 xs:h-[22rem] xs:w-[25rem] sm:h-[30rem] sm:w-[35rem] ">
