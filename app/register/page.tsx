@@ -55,7 +55,7 @@ const RegisterPage = (props: Props) => {
     isLoading: categoriesListLoading,
   } = useSWR(`${baseUrl}/hackathon/categories-list`, fetcher);
 
-  const [submitState, setSubmitState] = useState<string>("submit");
+  const [submitState, setSubmitState] = useState<"submit" | "submitting...">("submit");
 
   const {
     register,
@@ -77,22 +77,21 @@ const RegisterPage = (props: Props) => {
         body: JSON.stringify(data),
       });
       if (!res.ok) {
-        toast("Message wasn't sent", {
+        toast("Email already taken", {
           icon: <FaTimes className="text-red-400" />,
         });
         setSubmitState("submit");
-        console.log("Could not submit form");
-        return "Could not submit form";
+        console.log(res);
+        return "Email already taken";
       }
       const createdData = await res.json();
       if (createdData) {
         onOpen();
         reset();
         setSubmitState("submit");
-        console.log(data);
       }
     } catch (error) {
-      toast("Message wasn't sent", {
+      toast("Failed to register", {
         icon: <FaTimes className="text-red-400" />,
       });
       setSubmitState("submit");

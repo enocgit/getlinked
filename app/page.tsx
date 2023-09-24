@@ -10,6 +10,7 @@ import { FaCheck, FaCheckCircle } from "react-icons/fa";
 import FAQAccordion from "@/components/FAQAccordion";
 import Timeline from "@/components/Timeline";
 import Partners from "@/components/Partners";
+import Countdown from "@/components/Countdown";
 
 export default function Home() {
   return (
@@ -76,19 +77,7 @@ export default function Home() {
               </p>
               <MainButton href="register">Register</MainButton>
               {/* Countdown */}
-              <div
-                className={`${unicaOne.className} mt-10 translate-y-[60%] space-x-5 text-5xl`}
-              >
-                <span>
-                  00<span className="text-xs">H</span>
-                </span>
-                <span>
-                  00<span className="text-xs">M</span>
-                </span>
-                <span>
-                  00<span className="text-xs">S</span>
-                </span>
-              </div>
+              <Countdown />
             </div>
             <div className="relative mt-14 xl:left-20 xl:mt-0">
               <Image
