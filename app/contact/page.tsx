@@ -16,6 +16,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { baseUrl } from "@/baseUrl";
 import toast, { Toaster } from "react-hot-toast";
 import { FaSmileWink, FaThumbsUp, FaTimes } from "react-icons/fa";
+import P from "@/components/P";
 
 const schema = z.object({
   first_name: z.string().min(1, { message: "Please enter first name" }),
@@ -94,8 +95,8 @@ const ContactPage = (props: Props) => {
           style: { backgroundColor: "#100B20", color: "#FFF" },
         }}
       />
-      <Section className="relative overflow-x-hidden pt-32 text-white md:py-32">
-        <div className="relative items-center gap-x-40 md:flex md:gap-y-8 md:max-lg:gap-x-20">
+      <Section className="relative overflow-x-hidden pt-32 text-white md:py-20">
+        <div className="relative items-center gap-x-28 md:flex md:gap-y-8 md:max-lg:gap-x-20">
           <div className="relative order-2 hidden space-y-3 md:order-1 md:block">
             <Glow className="vibrate-1 -left-40 top-0 opacity-30 sm:-left-48" />
             <BgAesthetic
@@ -108,20 +109,20 @@ const ContactPage = (props: Props) => {
               Get in touch
             </h3>
             <div className="space-y-3">
-              <p className="max-w-[150px] leading-relaxed">
+              <P className="max-w-[150px] leading-relaxed">
                 Contact Information
-              </p>
+              </P>
               <p className="max-w-[150px] leading-relaxed">
                 27,Alara Street Yaba 100012 Lagos State
               </p>
               <p>
                 Call Us: <Link href="tel: 07076981819">07076981819</Link>
               </p>
-              <p className="">
+              <P className="">
                 we are open from Monday-Friday
                 <br />
                 <span>08:00am - 05:00pm</span>
-              </p>
+              </P>
               <p className="text-tertiary-100">Share on</p>
               <span className="flex gap-3">
                 <Link href="" target="_blank">
@@ -163,7 +164,7 @@ const ContactPage = (props: Props) => {
               </span>
             </div>
           </div>
-          <div className="relative order-1 w-full max-w-[30rem] rounded-md bg-transparent md:order-2 md:bg-white/3 md:p-14 md:shadow-md">
+          <div className="relative order-1 w-full max-w-[35rem] rounded-md bg-transparent md:order-2 md:bg-white/3 md:p-14 md:shadow-md">
             <BgAesthetic
               src="/png/star-white.png"
               className="-right-6 bottom-40 h-5 w-5 md:-right-20 md:bottom-0 md:h-[initial] md:w-[initial]"

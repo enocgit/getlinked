@@ -11,6 +11,10 @@ import FAQAccordion from "@/components/FAQAccordion";
 import Timeline from "@/components/Timeline";
 import Partners from "@/components/Partners";
 import Countdown from "@/components/Countdown";
+import {motion} from "framer-motion"
+import IgnitingRevolutionText from "@/components/IgnitingRevolutionText";
+import Rewards from "@/components/Rewards";
+import P from "@/components/P";
 
 export default function Home() {
   return (
@@ -20,19 +24,7 @@ export default function Home() {
         {/* Background effects */}
 
         <div className="relative min-h-max ">
-          <h2
-            className={`${style.revolution} text-center text-lg font-[700] italic tracking-wide sm:text-2xl xl:text-right`}
-          >
-            <BgAesthetic src="/png/star-white.png" className="left-12 top-8" />
-            <BgAesthetic
-              src="/png/star-neutral.png"
-              className="right-96 top-20"
-            />
-            <Glow className="left-0 top-0 lg:left-20" />
-            <Glow className="bottom-10 z-10 hidden xl:right-10 xl:top-20 xl:block" />
-            <Glow className="top-30 -right-20 z-10 hidden xl:block" />
-            Igniting a Revolution in HR Innovation
-          </h2>
+          <IgnitingRevolutionText />
           <div className="relative mt-14 flex flex-col xl:flex-row">
             <BgAesthetic
               src="/png/star-neutral.png"
@@ -97,7 +89,7 @@ export default function Home() {
                 />
               </div>
             </div>
-          </div>
+          I</div>
         </div>
       </section>
       {/* Introduction to getLinked */}
@@ -131,7 +123,7 @@ export default function Home() {
               Introduction to getlinked
               <span className="text-tertiary-100"> tech Hackthon 1.0</span>
             </h3>
-            <p className="max-w-lg text-center text-sm leading-loose md:text-left">
+            <P className="max-w-lg text-center text-sm leading-loose md:text-left">
               Our tech hackathon is a melting pot of visionaries, and its
               purpose is as clear as day: to shape the future. Whether
               you&apos;re a coding genius, a design maverick, or a concept
@@ -139,7 +131,7 @@ export default function Home() {
               reality. Solving real-world problems, pushing the boundaries of
               technology, and creating solutions that can change the world,
               that&apos;s what we&apos;re all about!
-            </p>
+            </P>
           </div>
         </div>
       </Section>
@@ -162,7 +154,7 @@ export default function Home() {
               Rules and
               <span className="text-tertiary-100"> Guidelines</span>
             </h3>
-            <p className="max-w-lg text-center text-sm leading-loose md:text-left">
+            <P className="max-w-lg text-center text-sm leading-loose md:text-left">
               Our tech hackathon is a melting pot of visionaries, and its
               purpose is as clear as day: to shape the future. Whether
               you&apos;re a coding genius, a design maverick, or a concept
@@ -170,7 +162,7 @@ export default function Home() {
               reality. Solving real-world problems, pushing the boundaries of
               technology, and creating solutions that can change the world,
               that&apos;s what we&apos;re all about!
-            </p>
+            </P>
           </div>
           <div className="relative order-1 h-60 w-60 md:order-2 md:h-[30rem] md:w-[30rem]">
             <Glow className="-bottom-96 -right-80 md:bottom-10" />
@@ -200,7 +192,7 @@ export default function Home() {
             />
             <Image
               src="/png/two-people.png"
-              alt=""
+              alt="Two people"
               fill
               style={{ objectFit: "contain" }}
               className="vibrate-1"
@@ -283,10 +275,10 @@ export default function Home() {
                 Frequently Ask
                 <span className="text-tertiary-100"> Question</span>
               </h3>
-              <p className="max-w-md text-center text-sm leading-loose md:text-left">
+              <P className="max-w-md text-center text-sm leading-loose md:text-left">
                 We got answers to the questions that you might want to ask about
                 <span className="font-[700]"> getlinked Hackathon 1.0</span>
-              </p>
+              </P>
             </div>
             <div className="">
               <FAQAccordion />
@@ -317,7 +309,7 @@ export default function Home() {
             />
             <Image
               src="/png/guy-on-cloud.png"
-              alt=""
+              alt="Guy on cloud"
               fill
               style={{ objectFit: "contain" }}
               className="vibrate-1"
@@ -384,7 +376,7 @@ export default function Home() {
             />
             <Image
               src="/png/trophy.png"
-              alt=""
+              alt="trophy"
               fill
               style={{ objectFit: "contain" }}
               className="vibrate-1 md:max-[1090px]:scale-75"
@@ -408,47 +400,7 @@ export default function Home() {
                 participants.
               </p>
             </div>
-            <div className="-gap-2 relative flex flex-col min-[400px]:flex-row min-[400px]:max-sm:scale-75 md:max-[1090px]:right-20 md:max-[1090px]:scale-75">
-              <BgAesthetic
-                src="/png/star-neutral.png"
-                className="-bottom-10 right-40"
-              />
-              <BgAesthetic
-                src="/png/star-white.png"
-                className="-right-20 top-20"
-              />
-              <BgAesthetic
-                src="/png/star-white.png"
-                className="-top-12 left-0"
-              />
-              <div className="relative order-2 mt-5 h-80 w-48 min-[400px]:order-1 min-[400px]:mt-14 min-[400px]:h-60 min-[400px]:w-32 md:mt-0">
-                <Image
-                  src="/png/2nd-position.png"
-                  alt=""
-                  fill
-                  style={{ objectFit: "contain" }}
-                  className=""
-                />
-              </div>
-              <div className="relative order-1 mt-14 h-80 w-48 min-[400px]:bottom-14 min-[400px]:order-2 md:mt-0">
-                <Image
-                  src="/png/1st-position.png"
-                  alt=""
-                  fill
-                  style={{ objectFit: "contain" }}
-                  className=""
-                />
-              </div>
-              <div className="relative order-3 mt-5 h-80 w-48 min-[400px]:order-3 min-[400px]:mt-14 min-[400px]:h-60 min-[400px]:w-32 md:mt-0">
-                <Image
-                  src="/png/3rd-position.png"
-                  alt=""
-                  fill
-                  style={{ objectFit: "contain" }}
-                  className=""
-                />
-              </div>
-            </div>
+            <Rewards />
           </div>
         </div>
       </Section>
@@ -489,10 +441,10 @@ export default function Home() {
               <small className="inline-block text-center text-white/75 md:text-left">
                 Last updated on September 12, 2023
               </small>
-              <p className="max-w-md text-center text-sm leading-loose md:text-left">
+              <P className="max-w-md text-center text-sm leading-loose md:text-left">
                 Below are our privacy & policy, which outline a lot of goodies.
                 it&apos;s our aim to always take of our participant
-              </p>
+              </P>
             </div>
             <div className="relative max-w-[480px] space-y-6 rounded-md border border-tertiary-100 p-5 pb-10 xs:p-14">
               <Glow className="-right-[40rem] -top-[32rem]" />
@@ -503,14 +455,14 @@ export default function Home() {
                 src="/png/star-gradient.png"
                 className="-left-20 bottom-48"
               />
-              <p className="leading-loose">
+              <P className="leading-loose">
                 At getlinked tech Hackathon 1.0, we value your privacy and are
                 committed to protecting your personal information. This Privacy
                 Policy outlines how we collect, use, disclose, and safeguard
                 your data when you participate in our tech hackathon event. By
                 participating in our event, you consent to the practices
                 described in this policy.
-              </p>
+              </P>
               <div className="leading-loose">
                 <h3 className="text-base font-[700] text-tertiary-100">
                   Licensing Policy

@@ -1,5 +1,6 @@
 "use client";
-import { Button, Link } from "@nextui-org/react";
+import { Button } from "@nextui-org/react";
+import Link from "next/link"
 import React, { HTMLAttributes } from "react";
 
 interface Props extends HTMLAttributes<HTMLButtonElement> {
@@ -12,7 +13,7 @@ const MainButton = ({ children, className, href }: Props) => {
   return (
     <Button
       as={Link}
-      href={href}
+      href={`${href}`}
       className={`w-32 rounded-sm bg-primary text-xs text-white ${className}`}
     >
       {children}

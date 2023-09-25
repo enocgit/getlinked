@@ -1,6 +1,8 @@
+"use client"
 import { clashDisplay } from "@/app/font";
 import React from "react";
 import BgAesthetic from "./BgAesthetic";
+import {motion} from "framer-motion";
 
 type Props = {};
 
@@ -17,7 +19,7 @@ const Timeline = (props: Props) => {
                 key={index}
                 className="grid grid-cols-7 items-center gap-5 text-sm text-white"
               >
-                <div className="relative col-span-3 space-y-1 justify-self-end text-right">
+                <motion.div className="relative col-span-3 space-y-1 justify-self-end text-right" whileInView={{x: 0}} initial={{x: -100}} transition={{duration: 1.5}}>
                   <h3 className="text-lg font-[700] text-tertiary-100">
                     Partners and Sponsors
                   </h3>
@@ -25,13 +27,13 @@ const Timeline = (props: Props) => {
                     Getlinked Hackathon 1.0 is honored to have the following
                     major companies as its partners and sponsors
                   </p>
-                </div>
+                </motion.div>
                 <div className="before:content relative col-span-1 flex h-10 w-10 items-center justify-center justify-self-center rounded-full bg-primary-200 font-[500] before:absolute before:bottom-12 before:left-5 before:h-20 before:w-1 before:bg-tertiary-100">
                   {index + 1}
                 </div>
-                <h3 className="col-span-3 justify-self-start text-left text-lg font-[700] text-tertiary-100">
+                <motion.h3 className="col-span-3 justify-self-start text-left text-lg font-[700] text-tertiary-100" whileInView={{x: 0}} initial={{x: 100}} transition={{duration: 1.5}}>
                   November 18, 2023
-                </h3>
+                </motion.h3>
               </div>
             );
           }
@@ -40,13 +42,13 @@ const Timeline = (props: Props) => {
               key={index}
               className="grid grid-cols-7 items-center gap-5 text-sm text-white"
             >
-              <h3 className="col-span-3 justify-self-end text-left text-lg font-[700] text-tertiary-100">
+              <motion.h3 className="col-span-3 justify-self-end text-left text-lg font-[700] text-tertiary-100" whileInView={{y: 0}} initial={{y: -100}} transition={{duration: 1.5}}>
                 November 18, 2023
-              </h3>
+              </motion.h3>
               <div className="before:content relative col-span-1 flex h-10 w-10 items-center justify-center justify-self-center rounded-full bg-primary-200 font-[500] before:absolute before:bottom-12 before:left-5 before:h-20 before:w-1 before:bg-tertiary-100">
                 {index + 1}
               </div>
-              <div className="relative col-span-3 space-y-1 justify-self-start text-left">
+              <motion.div className="relative col-span-3 space-y-1 justify-self-start text-left" whileInView={{y: 0}} initial={{y: 100}} transition={{duration: 1.5}}>
                 <h3 className="text-lg font-[700] text-tertiary-100">
                   Partners and Sponsors
                 </h3>
@@ -54,11 +56,12 @@ const Timeline = (props: Props) => {
                   Interested teams can now show their interest in the getlinked
                   tech hackathon 1.0 2023 by proceeding to register
                 </p>
-              </div>
+              </motion.div>
             </div>
           );
         })}
       </div>
+      {/* Mobile version */}
       <div className="relative grid gap-5 text-xs sm:hidden">
         <BgAesthetic
           src="/png/star-purple.png"
@@ -82,7 +85,7 @@ const Timeline = (props: Props) => {
                 </div>
               </div>
               <div className="relative space-y-2 justify-self-start text-left">
-                <div className="space-y-1">
+                <motion.div className="space-y-1" whileInView={{x: 0}} initial={{x: 100}} transition={{duration: 1.5}}>
                   <h3 className="text-md font-[700] text-tertiary-100">
                     Partners and Sponsors
                   </h3>
@@ -90,10 +93,10 @@ const Timeline = (props: Props) => {
                     Interested teams can now show their interest in the
                     getlinked tech hackathon 1.0 2023 by proceeding to register
                   </p>
-                </div>
-                <h3 className="font-[700] text-tertiary-100">
+                </motion.div>
+                <motion.h3 className="font-[700] text-tertiary-100" whileInView={{x: 0}} initial={{x: -100}} transition={{duration: 1.5}}>
                   November 18, 2023
-                </h3>
+                </motion.h3>
               </div>
             </div>
           );

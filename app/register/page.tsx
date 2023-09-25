@@ -126,6 +126,7 @@ const RegisterPage = (props: Props) => {
                 alt="Gentleman behind table"
                 fill
                 style={{ objectFit: "contain" }}
+                className="vibrate-1"
               />
             </div>
           </div>
