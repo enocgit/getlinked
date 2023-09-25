@@ -72,7 +72,7 @@ const Nav = () => {
             )
           }
         />
-        <NavbarBrand className="md:max-xl:-m-0 xl:-m-20">
+        <NavbarBrand className="md:max-xl:-m-0 xl:-m-20" onClick={() => setMenuActive("")}>
           <Link
             href="/"
             className={`${clashDisplay.className} ${
