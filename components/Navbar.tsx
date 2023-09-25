@@ -7,6 +7,7 @@ import {
   NavbarBrand,
   NavbarContent,
   NavbarItem,
+  Link,
   Button,
   NavbarMenuToggle,
   NavbarMenu,
@@ -17,19 +18,16 @@ import { clashDisplay } from "@/app/font";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import navMenus from "@/content/navMenus";
-import Link from "next/link";
 
 const Nav = () => {
   const pathname = usePathname();
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [menuActive, setMenuActive] = useState<string>("")
 
-  const [currentActive, setCurrentActive] = useState<string>("");
-
-  const handleCurrentActive = (e) => {
-    setCurrentActive(e.currentTarget?.dataset.id);
-    console.log(currentActive);
-  };
+  const handleMenuActive = (e) => {
+    setMenuActive(e.currentTarget?.dataset.id)
+  }
 
   return (
     <Navbar
@@ -90,21 +88,17 @@ const Nav = () => {
           {navMenus.map((menu) => {
             const { label, href } = menu;
             return (
-              <NavbarItem
-                key={label}
-                data-id={`${href}`}
-                onClick={handleCurrentActive}
-              >
+              <NavbarItem key={label} data-id={`${href}`} onClick={handleMenuActive}>
                 <Link
                   href={`${href}`}
                   className={`text-sm ${
                     pathname === href
                       ? "bg-primary-100 bg-clip-text text-transparent"
-                      : " text-white"
+                      : "bg-primary-100 bg-clip-text text-transparent"
                   } ${
-                    currentActive === href
+                    menuActive === href
                       ? "bg-primary-100 bg-clip-text text-transparent"
-                      : " text-white"
+                      : "text-white"
                   }`}
                 >
                   {label}
@@ -115,26 +109,25 @@ const Nav = () => {
         </div>
         <div className="hidden md:inline-flex">
           <NavbarItem>
-            <MainButton
-              href="/register"
-              className={`${
-                pathname == "/register" && "border border-primary bg-secondary"
-              }`}
-            >
-              Register
-            </MainButton>
+            <MainButton href="/register" className={`${pathname == "/register" && "bg-secondary border border-primary"}`}>Register</MainButton>
           </NavbarItem>
         </div>
       </NavbarContent>
       <NavbarMenu className="bg-secondary">
         {navMenus.map((menu, index) => (
-          <NavbarMenuItem key={menu.id}>
+          <NavbarMenuItem key={menu.id} data-id={`${menu.href}`} onClick={handleMenuActive}>
             <Link
               className={`mb-5 w-full text-[1.125rem] font-[500] ${
                 pathname === menu.href
                   ? "bg-primary-100 bg-clip-text text-transparent"
-                  : " text-white"
-              } ${index == 0 && "mt-14"} `}
+                  : "bg-primary-100 bg-clip-text text-transparent"
+              } ${
+                menuActive === menu.href
+                  ? "bg-primary-100 bg-clip-text text-transparent"
+                  : "text-white"
+              } ${
+                index == 0 && "mt-14"
+              } `}
               href={`${menu.href}`}
               size="lg"
             >
@@ -142,14 +135,7 @@ const Nav = () => {
             </Link>
           </NavbarMenuItem>
         ))}
-        <MainButton
-          href="/register"
-          className={`${
-            pathname == "/register" && "border border-primary bg-secondary"
-          }`}
-        >
-          Register
-        </MainButton>
+        <MainButton href="/register" className={`${pathname == "/register" && "bg-secondary border border-primary"}`}>Register</MainButton>
       </NavbarMenu>
     </Navbar>
   );
