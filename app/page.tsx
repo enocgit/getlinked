@@ -89,7 +89,7 @@ export default function Home() {
                 />
               </div>
             </div>
-          I</div>
+          </div>
         </div>
       </section>
       {/* Introduction to getLinked */}
