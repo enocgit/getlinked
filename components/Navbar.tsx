@@ -1,13 +1,14 @@
 //@ts-nocheck
 "use client";
 import React, { useState } from "react";
+import Link from "next/link"
 
 import {
   Navbar,
   NavbarBrand,
   NavbarContent,
   NavbarItem,
-  Link,
+  // Link,
   Button,
   NavbarMenuToggle,
   NavbarMenu,
@@ -113,11 +114,12 @@ const Nav = () => {
           </NavbarItem>
         </div>
       </NavbarContent>
-      <NavbarMenu className="bg-secondary">
+      {/* Mobile */}
+      <NavbarMenu className={`bg-secondary space-y-5 pt-14`}>
         {navMenus.map((menu, index) => (
           <NavbarMenuItem key={menu.id} data-id={`${menu.href}`} onClick={handleMenuActive}>
             <Link
-              className={`mb-5 w-full text-[1.125rem] font-[500] ${
+              className={`w-full text-[1.125rem] font-[500] ${
                 pathname === menu.href
                   ? "bg-primary-100 bg-clip-text text-transparent"
                   : "bg-primary-100 bg-clip-text text-transparent"
@@ -125,8 +127,6 @@ const Nav = () => {
                 menuActive === menu.href
                   ? "bg-primary-100 bg-clip-text text-transparent"
                   : "text-white"
-              } ${
-                index == 0 && "mt-14"
               } `}
               href={`${menu.href}`}
               size="lg"
