@@ -14,10 +14,15 @@ const Rewards = (props: Props) => {
       />
       <BgAesthetic src="/png/star-white.png" className="-right-20 top-20" />
       <BgAesthetic src="/png/star-white.png" className="-top-12 left-0" />
-      <motion.div className="relative order-2 mt-5 h-80 w-48 min-[400px]:order-1 min-[400px]:mt-14 min-[400px]:h-60 min-[400px]:w-32 md:mt-0" whileInView={{y: 0}} initial={{y: -150}} transition={{duration: 2}}>
+      <motion.div
+        className="relative order-2 mt-5 h-80 w-48 min-[400px]:order-1 min-[400px]:mt-14 min-[400px]:h-60 min-[400px]:w-32 md:mt-0"
+        whileInView={{ y: 0 }}
+        initial={{ y: -150 }}
+        transition={{ duration: 2 }}
+      >
         <Image
           src="/png/2nd-position.png"
-          alt=""
+          alt="2nd position"
           fill
           style={{ objectFit: "contain" }}
           className=""
@@ -26,16 +31,21 @@ const Rewards = (props: Props) => {
       <div className="relative order-1 mt-14 h-80 w-48 min-[400px]:bottom-14 min-[400px]:order-2 md:mt-0">
         <Image
           src="/png/1st-position.png"
-          alt=""
+          alt="1st position"
           fill
           style={{ objectFit: "contain" }}
           className=""
         />
       </div>
-      <motion.div className="relative order-3 mt-5 h-80 w-48 min-[400px]:order-3 min-[400px]:mt-14 min-[400px]:h-60 min-[400px]:w-32 md:mt-0" whileInView={{y: 0}} initial={{y: 150}} transition={{duration: 2}}>
+      <motion.div
+        className="relative order-3 mt-5 h-80 w-48 min-[400px]:order-3 min-[400px]:mt-14 min-[400px]:h-60 min-[400px]:w-32 md:mt-0"
+        whileInView={{ y: 0 }}
+        initial={{ y: 150 }}
+        transition={{ duration: 2 }}
+      >
         <Image
           src="/png/3rd-position.png"
-          alt=""
+          alt="3rd position"
           fill
           style={{ objectFit: "contain" }}
           className=""

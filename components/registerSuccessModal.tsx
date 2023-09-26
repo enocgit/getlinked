@@ -1,14 +1,10 @@
 "use client";
-import React, { useEffect } from "react";
+import React from "react";
 
 import {
   Modal,
   ModalContent,
-  ModalHeader,
   ModalBody,
-  ModalFooter,
-  Button,
-  useDisclosure,
 } from "@nextui-org/react";
 import Image from "next/image";
 
@@ -37,7 +33,7 @@ export default function RegisterSuccessModal({
                   <div className="relative h-60 w-60">
                     <Image
                       src="/png/congratulation.png"
-                      alt=""
+                      alt="congratulation"
                       fill
                       style={{ objectFit: "contain" }}
                     />

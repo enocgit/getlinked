@@ -4,12 +4,11 @@ import BgAesthetic from "./BgAesthetic";
 import Glow from "./Glow";
 import style from "@/app/Home.module.css";
 
-
 const IgnitingRevolutionText = () => {
   return (
     <motion.h2
       className={`${style.revolution} text-center text-lg font-[700] italic tracking-wide sm:text-2xl xl:text-right`}
-      animate={{ x: [0 -50, 50, 0] }}
+      animate={{ x: [0 - 50, 50, 0] }}
       // initial={{x: -200}}
     >
       <BgAesthetic src="/png/star-white.png" className="left-12 top-8" />

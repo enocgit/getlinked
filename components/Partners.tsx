@@ -12,7 +12,6 @@ const Partners = (props: Props) => {
   return (
     <div className="relative mt-2 flex items-center justify-center border border-tertiary-100 p-2 min-[500px]:p-10 md:p-20 ">
       <Glow className="-left-60 -top-20" />
-      {/* <Glow className="-bottom-32 -right-60" /> */}
       <BgAesthetic src="/png/star-purple.png" className="-top-10 left-10" />
       <BgAesthetic src="/png/star-gradient.png" className="right-80 top-10" />
       <BgAesthetic src="/png/star-white.png" className="bottom-10 right-80" />

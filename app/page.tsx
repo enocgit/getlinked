@@ -5,16 +5,16 @@ import { clashDisplay } from "./font";
 import Glow from "@/components/Glow";
 import Section from "@/components/Section";
 import BgAesthetic from "@/components/BgAesthetic";
-import { montserrat, unicaOne } from "./layout";
-import { FaCheck, FaCheckCircle } from "react-icons/fa";
+import { FaCheck } from "react-icons/fa";
 import FAQAccordion from "@/components/FAQAccordion";
 import Timeline from "@/components/Timeline";
 import Partners from "@/components/Partners";
 import Countdown from "@/components/Countdown";
-import {motion} from "framer-motion"
 import IgnitingRevolutionText from "@/components/IgnitingRevolutionText";
 import Rewards from "@/components/Rewards";
 import P from "@/components/P";
+import judgingCriteria from "@/content/judgingCriteria";
+import terms from "@/content/terms";
 
 export default function Home() {
   return (
@@ -199,7 +199,6 @@ export default function Home() {
             />
           </div>
           <div className="relative space-y-3">
-            {/* <Glow className="-bottom-32 -right-40" /> */}
             <h3
               className={`${clashDisplay.className} text-center text-2xl md:max-w-[200px] md:text-left`}
             >
@@ -207,48 +206,20 @@ export default function Home() {
               <span className="text-tertiary-100"> Key attributes</span>
             </h3>
             <ul className="max-w-lg space-y-5 text-sm">
-              <li className="text-center leading-loose md:text-left">
-                <span className="font-[700] text-tertiary-200">
-                  Innovation and Creativity
-                </span>
-                : Evaluate the uniqueness and creativity of the solution.
-                Consider whether it addresses a real-world problem in a novel
-                way or introduces innovative features.
-              </li>
-              <li className="text-center leading-loose md:text-left">
-                <span className="font-[700] text-tertiary-200">
-                  Functionality
-                </span>
-                : Assess how well the solution works. Does it perform its
-                intended functions effectively and without major issues? Judges
-                would consider the completeness and robustness of the solution.
-              </li>
-              <li className="text-center leading-loose md:text-left">
-                <span className="font-[700] text-tertiary-200">
-                  Impact and Relevance
-                </span>
-                : Determine the potential impact of the solution in the real
-                world. Does it address a significant problem, and is it relevant
-                to the target audience? Judges would assess the potential
-                social, economic, or environmental benefits.
-              </li>
-              <li className="text-center leading-loose md:text-left">
-                <span className="font-[700] text-tertiary-200">
-                  Technical Complexity
-                </span>
-                : Evaluate the technical sophistication of the solution. Judges
-                would consider the complexity of the code, the use of advanced
-                technologies or algorithms, and the scalability of the solution.
-              </li>
-              <li className="text-center leading-loose md:text-left">
-                <span className="font-[700] text-tertiary-200">
-                  Adherence to Hackathon Rules
-                </span>
-                : Judges will Ensure that the team adhered to the rules and
-                guidelines of the hackathon, including deadlines, use of
-                specific technologies or APIs, and any other
-                competition-specific requirements.
-              </li>
+              {judgingCriteria.map((criteria) => {
+                const { title, body } = criteria;
+                return (
+                  <li
+                    key={title}
+                    className="text-center leading-loose md:text-left"
+                  >
+                    <span className="font-[700] text-tertiary-200">
+                      {title}
+                    </span>
+                    : {body}
+                  </li>
+                );
+              })}
             </ul>
             <MainButton className="mx-auto flex justify-center capitalize">
               Read more
@@ -471,20 +442,15 @@ export default function Home() {
                   Here are terms of our Standard License:
                 </p>
                 <ul className="mt-4 space-y-5">
-                  <li className="flex gap-2">
-                    <FaCheck className="relative top-1.5 shrink-0 rounded-full bg-[#2DE100] p-1 text-white" />
-                    <p>
-                      The Standard License grants you a non-exclusive right to
-                      navigate and register for our event
-                    </p>
-                  </li>
-                  <li className="flex gap-2">
-                    <FaCheck className="relative top-1.5 shrink-0 rounded-full bg-[#2DE100] p-1 text-white" />
-                    <p>
-                      The Standard License grants you a non-exclusive right to
-                      navigate and register for our event
-                    </p>
-                  </li>
+                  {terms.map((term) => {
+                    const { id, term: termLabel } = term;
+                    return (
+                      <li key={id} className="flex gap-2">
+                        <FaCheck className="relative top-1.5 shrink-0 rounded-full bg-[#2DE100] p-1 text-white" />
+                        <p>{termLabel}</p>
+                      </li>
+                    );
+                  })}
                 </ul>
                 <MainButton className="mx-auto mt-5 flex justify-center">
                   Read more

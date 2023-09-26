@@ -3,18 +3,23 @@ import { clashDisplay } from "@/app/font";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import Glow from "./Glow";
 import BgAesthetic from "./BgAesthetic";
 import { usePathname } from "next/navigation";
+import usefulLinks from "@/content/navMenus";
+import socials from "@/content/socials";
 
 type Props = {};
 
 const Footer = (props: Props) => {
-  const pathname = usePathname()
+  const pathname = usePathname();
   return (
-    <footer className={`${pathname !== "/" && "hidden"} flex items-center justify-center p-8 text-xs text-white xss:p-14 bg-secondary-100 `}>
+    <footer
+      className={`${
+        pathname !== "/" && "hidden"
+      } flex items-center justify-center bg-secondary-100 p-8 text-xs text-white xss:p-14 `}
+    >
       <div className="">
-        <div className="relative flex flex-wrap gap-y-10 gap-x-20 lg:gap-x-32">
+        <div className="relative flex flex-wrap gap-x-20 gap-y-10 lg:gap-x-32">
           <BgAesthetic
             src="/png/star-white.png"
             className="-left-20 top-10"
@@ -38,7 +43,7 @@ const Footer = (props: Props) => {
             </div>
             <div className="flex items-center gap-2">
               <p className="">Terms of Use</p>
-              <div className="w-0.5 h-5 bg-tertiary-100"></div>
+              <div className="h-5 w-0.5 bg-tertiary-100"></div>
               <p className="">Privacy policy</p>
             </div>
           </div>
@@ -46,58 +51,60 @@ const Footer = (props: Props) => {
           <div className="relative">
             <BgAesthetic
               src="/png/star-gradient.png"
-              className="-left-20 -bottom-2"
+              className="-bottom-2 -left-20"
               width={10}
               height={10}
             />
 
-            <h3 className="text-sm text-tertiary-100 font-[700]">
+            <h3 className="text-sm font-[700] text-tertiary-100">
               Useful Links
             </h3>
             <ul className="mt-2 space-y-2">
-              <li>Overview</li>
-              <li>Timeline</li>
-              <li>FAQs</li>
-              <li>Register</li>
-              <li className="flex font-[700] gap-3 text-tertiary-100">
+              {usefulLinks.map((link) => {
+                const { id, href, label } = link;
+                if (label.toLocaleLowerCase() !== "contact") {
+                  return (
+                    <li key={id}>
+                      <Link href={`${href}`}>{label}</Link>
+                    </li>
+                  );
+                }
+              })}
+              <li>
+                <Link href="/register">Register</Link>
+              </li>
+              <li className="flex gap-3 font-[700] text-tertiary-100">
                 Follow us
                 <span className="flex gap-3">
-                  <Link href="" target="_blank">
-                    <Image
-                      src="/svg/instagram.svg"
-                      alt="instagram"
-                      width={14}
-                      height={14}
-                      className="shrink-0"
-                    />
-                  </Link>
-                  <Link href="" target="_blank">
-                    <Image
-                      src="/svg/xtwitter.svg"
-                      alt="xtwitter"
-                      width={14}
-                      height={14}
-                      className="shrink-0"
-                    />
-                  </Link>
-                  <Link href="" target="_blank">
-                    <Image
-                      src="/svg/facebook.svg"
-                      alt="facebook"
-                      width={8}
-                      height={8}
-                      className="shrink-0"
-                    />
-                  </Link>
-                  <Link href="" target="_blank">
-                    <Image
-                      src="/svg/linkedin.svg"
-                      alt="linkedin"
-                      width={14}
-                      height={14}
-                      className="shrink-0"
-                    />
-                  </Link>
+                  {socials.map((social) => {
+                    const { name, image, href } = social;
+                    if (name.toLowerCase() === "facebook") {
+                      return (
+                        <Link key={name} href={`${href}`} target="_blank">
+                          <Image
+                            src={image}
+                            alt={name.toLowerCase()}
+                            width={8}
+                            height={8}
+                            title={name}
+                            className="shrink-0"
+                          />
+                        </Link>
+                      );
+                    }
+                    return (
+                      <Link key={name} href={`${href}`} target="_blank">
+                        <Image
+                          src={image}
+                          alt={name.toLowerCase()}
+                          width={14}
+                          height={14}
+                          title={name}
+                          className="shrink-0"
+                        />
+                      </Link>
+                    );
+                  })}
                 </span>
               </li>
             </ul>
@@ -116,7 +123,7 @@ const Footer = (props: Props) => {
               width={10}
               height={10}
             />
-            <h3 className="text-sm text-tertiary-100 font-[700]">Contact Us</h3>
+            <h3 className="text-sm font-[700] text-tertiary-100">Contact Us</h3>
             <ul className="mt-2 space-y-2">
               <li className="">
                 <Link href="tel:+234 6707653444" className="flex gap-4">

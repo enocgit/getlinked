@@ -6,16 +6,14 @@ import Section from "@/components/Section";
 import Image from "next/image";
 import React, { useState } from "react";
 import { clashDisplay } from "../font";
-import Link from "next/link";
-import MainButton from "@/components/MainButton";
 import { useRouter } from "next/navigation";
-import { Checkbox, useDisclosure } from "@nextui-org/react";
+import { useDisclosure } from "@nextui-org/react";
 import { z } from "zod";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { baseUrl } from "@/baseUrl";
 import useSWR from "swr";
-import { FaSmileWink, FaTimes } from "react-icons/fa";
+import { FaTimes } from "react-icons/fa";
 import toast, { Toaster } from "react-hot-toast";
 import RegisterSuccessModal from "@/components/registerSuccessModal";
 
@@ -55,7 +53,9 @@ const RegisterPage = (props: Props) => {
     isLoading: categoriesListLoading,
   } = useSWR(`${baseUrl}/hackathon/categories-list`, fetcher);
 
-  const [submitState, setSubmitState] = useState<"submit" | "submitting...">("submit");
+  const [submitState, setSubmitState] = useState<"submit" | "submitting...">(
+    "submit",
+  );
 
   const {
     register,

@@ -5,10 +5,10 @@ import CountdownTimer from "react-countdown";
 const unicaOne = Unica_One({ subsets: ["latin"], weight: "400" });
 
 type CountdownProps = {
-    hours: number;
-    minutes: number;
-    seconds: number;
-}
+  hours: number;
+  minutes: number;
+  seconds: number;
+};
 
 const renderer = ({ hours, minutes, seconds }: CountdownProps) => {
   // Render a countdown
@@ -34,10 +34,10 @@ const renderer = ({ hours, minutes, seconds }: CountdownProps) => {
 
 const Countdown = () => {
   return (
-   <CountdownTimer 
-   date={Date.now() + 200000000000000000}
-   renderer={renderer}
-   />
+    <CountdownTimer
+      date={Date.now() + 200000000000000000}
+      renderer={renderer}
+    />
   );
 };
 

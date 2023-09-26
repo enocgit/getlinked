@@ -8,15 +8,15 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { clashDisplay } from "../font";
 import Link from "next/link";
-import MainButton from "@/components/MainButton";
 import { useRouter } from "next/navigation";
 import { z } from "zod";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { baseUrl } from "@/baseUrl";
 import toast, { Toaster } from "react-hot-toast";
-import { FaSmileWink, FaThumbsUp, FaTimes } from "react-icons/fa";
+import { FaSmileWink, FaTimes } from "react-icons/fa";
 import P from "@/components/P";
+import socials from "@/content/socials";
 
 const schema = z.object({
   first_name: z.string().min(1, { message: "Please enter first name" }),
@@ -125,42 +125,35 @@ const ContactPage = (props: Props) => {
               </P>
               <p className="text-tertiary-100">Share on</p>
               <span className="flex gap-3">
-                <Link href="" target="_blank">
-                  <Image
-                    src="/svg/instagram.svg"
-                    alt="instagram"
-                    width={14}
-                    height={14}
-                    className="shrink-0"
-                  />
-                </Link>
-                <Link href="" target="_blank">
-                  <Image
-                    src="/svg/xtwitter.svg"
-                    alt="xtwitter"
-                    width={14}
-                    height={14}
-                    className="shrink-0"
-                  />
-                </Link>
-                <Link href="" target="_blank">
-                  <Image
-                    src="/svg/facebook.svg"
-                    alt="facebook"
-                    width={8}
-                    height={8}
-                    className="shrink-0"
-                  />
-                </Link>
-                <Link href="" target="_blank">
-                  <Image
-                    src="/svg/linkedin.svg"
-                    alt="linkedin"
-                    width={14}
-                    height={14}
-                    className="shrink-0"
-                  />
-                </Link>
+                {socials.map((social) => {
+                  const { name, image, href } = social;
+                  if (name.toLowerCase() === "facebook") {
+                    return (
+                      <Link key={name} href={`${href}`} target="_blank">
+                        <Image
+                          src={image}
+                          alt={name.toLowerCase()}
+                          width={8}
+                          height={8}
+                          title={name}
+                          className="shrink-0"
+                        />
+                      </Link>
+                    );
+                  }
+                  return (
+                    <Link key={name} href={`${href}`} target="_blank">
+                      <Image
+                        src={image}
+                        alt={name.toLowerCase()}
+                        width={14}
+                        height={14}
+                        title={name}
+                        className="shrink-0"
+                      />
+                    </Link>
+                  );
+                })}
               </span>
             </div>
           </div>

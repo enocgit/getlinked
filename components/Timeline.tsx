@@ -1,61 +1,73 @@
-"use client"
-import { clashDisplay } from "@/app/font";
-import React from "react";
+"use client";
 import BgAesthetic from "./BgAesthetic";
-import {motion} from "framer-motion";
-
-type Props = {};
+import { motion } from "framer-motion";
+import timeline from "@/content/timeline";
 
 const mockTimeline = [1, 2, 3, 4, 5, 6];
 
-const Timeline = (props: Props) => {
+const Timeline = () => {
   return (
     <>
       <div className="hidden space-y-16 sm:block">
-        {mockTimeline.map((timeline, index) => {
+        {timeline.map((timeline, index: number) => {
+          const { title, body, date } = timeline;
           if (index % 2 === 0) {
             return (
               <div
-                key={index}
+                key={title}
                 className="grid grid-cols-7 items-center gap-5 text-sm text-white"
               >
-                <motion.div className="relative col-span-3 space-y-1 justify-self-end text-right" whileInView={{x: 0}} initial={{x: -100}} transition={{duration: 1.5}}>
+                <motion.div
+                  className="relative col-span-3 space-y-1 justify-self-end text-right"
+                  whileInView={{ x: 0 }}
+                  initial={{ x: -100 }}
+                  transition={{ duration: 1.5 }}
+                >
                   <h3 className="text-lg font-[700] text-tertiary-100">
-                    Partners and Sponsors
+                    {title}
                   </h3>
-                  <p className="max-w-md leading-relaxed">
-                    Getlinked Hackathon 1.0 is honored to have the following
-                    major companies as its partners and sponsors
-                  </p>
+                  <p className="max-w-md leading-relaxed">{body}</p>
                 </motion.div>
                 <div className="before:content relative col-span-1 flex h-10 w-10 items-center justify-center justify-self-center rounded-full bg-primary-200 font-[500] before:absolute before:bottom-12 before:left-5 before:h-20 before:w-1 before:bg-tertiary-100">
                   {index + 1}
                 </div>
-                <motion.h3 className="col-span-3 justify-self-start text-left text-lg font-[700] text-tertiary-100" whileInView={{x: 0}} initial={{x: 100}} transition={{duration: 1.5}}>
-                  November 18, 2023
+                <motion.h3
+                  className="col-span-3 justify-self-start text-left text-lg font-[700] text-tertiary-100"
+                  whileInView={{ x: 0 }}
+                  initial={{ x: 100 }}
+                  transition={{ duration: 1.5 }}
+                >
+                  {date}
                 </motion.h3>
               </div>
             );
           }
           return (
             <div
-              key={index}
+              key={title}
               className="grid grid-cols-7 items-center gap-5 text-sm text-white"
             >
-              <motion.h3 className="col-span-3 justify-self-end text-left text-lg font-[700] text-tertiary-100" whileInView={{y: 0}} initial={{y: -100}} transition={{duration: 1.5}}>
-                November 18, 2023
+              <motion.h3
+                className="col-span-3 justify-self-end text-left text-lg font-[700] text-tertiary-100"
+                whileInView={{ y: 0 }}
+                initial={{ y: -100 }}
+                transition={{ duration: 1.5 }}
+              >
+                {date}
               </motion.h3>
               <div className="before:content relative col-span-1 flex h-10 w-10 items-center justify-center justify-self-center rounded-full bg-primary-200 font-[500] before:absolute before:bottom-12 before:left-5 before:h-20 before:w-1 before:bg-tertiary-100">
                 {index + 1}
               </div>
-              <motion.div className="relative col-span-3 space-y-1 justify-self-start text-left" whileInView={{y: 0}} initial={{y: 100}} transition={{duration: 1.5}}>
+              <motion.div
+                className="relative col-span-3 space-y-1 justify-self-start text-left"
+                whileInView={{ y: 0 }}
+                initial={{ y: 100 }}
+                transition={{ duration: 1.5 }}
+              >
                 <h3 className="text-lg font-[700] text-tertiary-100">
-                  Partners and Sponsors
+                  {title}
                 </h3>
-                <p className="max-w-md leading-relaxed">
-                  Interested teams can now show their interest in the getlinked
-                  tech hackathon 1.0 2023 by proceeding to register
-                </p>
+                <p className="max-w-md leading-relaxed">{body}</p>
               </motion.div>
             </div>
           );
@@ -85,7 +97,12 @@ const Timeline = (props: Props) => {
                 </div>
               </div>
               <div className="relative space-y-2 justify-self-start text-left">
-                <motion.div className="space-y-1" whileInView={{x: 0}} initial={{x: 100}} transition={{duration: 1.5}}>
+                <motion.div
+                  className="space-y-1"
+                  whileInView={{ x: 0 }}
+                  initial={{ x: 100 }}
+                  transition={{ duration: 1.5 }}
+                >
                   <h3 className="text-md font-[700] text-tertiary-100">
                     Partners and Sponsors
                   </h3>
@@ -94,7 +111,12 @@ const Timeline = (props: Props) => {
                     getlinked tech hackathon 1.0 2023 by proceeding to register
                   </p>
                 </motion.div>
-                <motion.h3 className="font-[700] text-tertiary-100" whileInView={{x: 0}} initial={{x: -100}} transition={{duration: 1.5}}>
+                <motion.h3
+                  className="font-[700] text-tertiary-100"
+                  whileInView={{ x: 0 }}
+                  initial={{ x: -100 }}
+                  transition={{ duration: 1.5 }}
+                >
                   November 18, 2023
                 </motion.h3>
               </div>

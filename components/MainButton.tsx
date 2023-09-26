@@ -1,6 +1,6 @@
 "use client";
 import { Button } from "@nextui-org/react";
-import Link from "next/link"
+import Link from "next/link";
 import React, { HTMLAttributes } from "react";
 
 interface Props extends HTMLAttributes<HTMLButtonElement> {
